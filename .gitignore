@@ -1,0 +1,21 @@
+# Secrets directory (copy manually to host /data/secrets/)
+secrets/
+
+# Ignore Docker-related files
+**/node_modules/
+**/.DS_Store
+**/dist/
+**/build/
+**/.vscode/
+**/.idea/
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+**/.coverage
+**/coverage/
+**/logs/
+**/tmp/
+**/.venv/
+**/.mypy_cache/
+**/.docker-compose.override.yml
+**/docker-compose.override.yml

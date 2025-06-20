@@ -1,0 +1,25 @@
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "8081:443/tcp"
+    environment:
+      TZ: 'Europe/Berlin'
+      # Upstream DNS Server Cloudflare IPv4
+      PIHOLE_DNS_: '1.1.1.1;1.0.0.1'
+      # Respond only on interface eth0
+      DNSMASQ_LISTENING: 'single'
+      # Conditional forwarding settings für Unifi Dream Machine
+      CONDITIONAL_FORWARDING: 'true'
+      CONDITIONAL_FORWARDING_IP: '192.168.2.1'
+      CONDITIONAL_FORWARDING_DOMAIN: 'elmstreet79.de'
+      CONDITIONAL_FORWARDING_REVERSE: '192.168.2.0/24'
+    # Volumes store your data between container upgrades
+    volumes:
+      - '/data/pihole/etc-pihole:/etc/pihole'
+      - '/data/pihole/etc-dnsmasq.d:/etc/dnsmasq.d'
+
+    restart: unless-stopped

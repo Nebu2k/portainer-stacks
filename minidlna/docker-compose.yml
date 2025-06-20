@@ -1,0 +1,20 @@
+---
+version: "3"
+
+services:
+  minidlna-desktop:
+    image: giof71/minidlna
+    container_name: minidlna
+    network_mode: host
+    environment:
+      - MINIDLNA_ROOT_CONTAINER=V
+      - MINIDLNA_DIR_V_1=/video
+      - MINIDLNA_ENABLE_INOTIFY=YES
+      - MINIDLNA_FRIENDLY_NAME=raspi5
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /media/share/video:/video
+      - /data/minidlna/config/log:/log
+      - /data/minidlna/config/db:/db
+    restart: unless-stopped
