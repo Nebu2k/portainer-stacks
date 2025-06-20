@@ -9,7 +9,7 @@ services:
     ports:
       - 8754:8754
     env_file:
-      - /secrets/fr24.env
+      - /data/secrets/fr24.env
     environment:
       - BEASTHOST=192.168.2.9
       - FR24KEY=${FR24_KEY}

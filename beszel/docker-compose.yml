@@ -18,7 +18,7 @@ services:
       - /data/beszel/beszel_socket:/beszel_socket
       - /var/run/docker.sock:/var/run/docker.sock:ro
     env_file:
-      - /secrets/beszel.env
+      - /data/secrets/beszel.env
     environment:
       LISTEN: /beszel_socket/beszel.sock
       # Do not remove quotes around the key

@@ -5,7 +5,7 @@ services:
     container_name: tado_aa
     image: saschabrockel/tado_aa:latest
     env_file:
-      - /secrets/tado.env
+      - /data/secrets/tado.env
     environment:
       - USERNAME=${TADO_USERNAME}
       - PASSWORD=${TADO_PASSWORD}

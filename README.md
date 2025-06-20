@@ -19,6 +19,7 @@ Diese Repository enthält meine Docker Compose Stacks für Portainer.
    sudo mkdir -p /data/secrets
    sudo cp secrets/* /data/secrets/
    sudo chmod 600 /data/secrets/*.env
+   sudo chown root:root /data/secrets/*.env
    ```
 
 3. **Portainer Agent mit Secrets-Mount starten:**
@@ -33,7 +34,6 @@ Diese Repository enthält meine Docker Compose Stacks für Portainer.
      -v /var/lib/docker/volumes:/var/lib/docker/volumes \
      -v /data:/data \
      -v /media:/media \
-     -v /data/secrets:/secrets \
      portainer/agent:latest
    ```
 
@@ -44,6 +44,41 @@ Diese Repository enthält meine Docker Compose Stacks für Portainer.
    - Gib die Repository URL ein
    - Wähle den gewünschten Stack-Ordner aus
    - Portainer liest automatisch die Secrets aus `/secrets/`
+
+## Troubleshooting
+
+### "env file /secrets/beszel.env not found"
+
+Wenn Sie diese Fehlermeldung erhalten:
+
+1. **Prüfe ob Secrets auf Host existieren:**
+   ```bash
+   ls -la /data/secrets/
+   cat /data/secrets/beszel.env
+   ```
+
+2. **Prüfe ob Agent auf Secrets zugreifen kann:**
+   ```bash
+   docker exec portainer_agent ls -la /data/secrets/
+   docker exec portainer_agent cat /data/secrets/beszel.env
+   ```
+
+3. **Falls Agent die Secrets nicht sieht:**
+   ```bash
+   # Agent neu starten:
+   docker restart portainer_agent
+   
+   # Oder Agent komplett neu deployen mit korrekten Mounts
+   docker stop portainer_agent
+   docker rm portainer_agent
+   # Dann den Agent-Befehl aus Setup Schritt 3 ausführen
+   ```
+
+4. **Berechtigung prüfen:**
+   ```bash
+   sudo chown -R root:root /data/secrets/
+   sudo chmod -R 644 /data/secrets/*.env
+   ```
 
 ## Stacks
 
