@@ -5,7 +5,5 @@ services:
     container_name: tado_aa
     image: saschabrockel/tado_aa:latest
     environment:
-      - USERNAME=${TADO_USERNAME}
-      - PASSWORD=${TADO_PASSWORD}
       - GEOFENCING=True
       - OPENWINDOWDETECTION=True
