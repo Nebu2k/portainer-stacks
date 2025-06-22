@@ -29,4 +29,5 @@ jobs:
       with:
         context: ./homebridge
         push: true
+        platforms: linux/amd64,linux/arm64
         tags: nebu2k/homebridge-custom:latest
