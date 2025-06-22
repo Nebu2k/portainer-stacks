@@ -1,7 +1,7 @@
 version: '2'
 services:
   homebridge:
-    build: .
+    image: nebu2k/homebridge-custom:latest
     restart: always
     network_mode: host
     volumes:
