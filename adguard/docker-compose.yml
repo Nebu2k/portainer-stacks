@@ -1,0 +1,30 @@
+services:
+  adguardhome:
+    image: adguard/adguardhome:latest
+    container_name: adguardhome
+    restart: unless-stopped
+    ports:
+      # DNS Ports (REQUIRED - für alle Clients im LAN)
+      - "53:53/tcp"
+      - "53:53/udp"
+      
+      # Web UI (REQUIRED - für Admin-Zugriff)
+      - "8080:3000/tcp"
+      
+      # Optional: DNS-over-TLS (für externe Clients/Mobile)
+      # - "853:853/tcp"
+      
+      # Optional: DNS-over-HTTPS (für externe Clients)
+      # - "443:443/tcp"
+      # - "443:443/udp"
+    
+    volumes:
+      - /data/adguard/workdir:/opt/adguardhome/work
+      - /data/adguard/confdir:/opt/adguardhome/conf
+    
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/login.html || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
