@@ -9,7 +9,8 @@ services:
       - "53:53/udp"
       
       # Web UI (REQUIRED - für Admin-Zugriff)
-      - "8080:3000/tcp"
+      # Port 80 intern (nach Setup), 8080 extern
+      - "8080:80/tcp"
       
       # Optional: DNS-over-TLS (für externe Clients/Mobile)
       # - "853:853/tcp"
@@ -23,7 +24,7 @@ services:
       - /data/adguard/confdir:/opt/adguardhome/conf
     
     healthcheck:
-      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/login.html || exit 1"]
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:80/login.html || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
