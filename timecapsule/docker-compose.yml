@@ -16,4 +16,9 @@ services:
       - VOLUME_SIZE_LIMIT=500 G
     tmpfs:
      - /run/samba
-    
+    healthcheck:
+      test: ["CMD-SHELL", "smbclient -L localhost -U % -m SMB3 || exit 1"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 30s

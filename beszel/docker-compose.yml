@@ -8,6 +8,12 @@ services:
     volumes:
       - /data/beszel/beszel_data:/beszel_data
       - /data/beszel/beszel_socket:/beszel_socket
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:8090 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
 
   beszel-agent:
     image: henrygd/beszel-agent:latest
@@ -21,3 +27,9 @@ services:
       LISTEN: /beszel_socket/beszel.sock
       # Do not remove quotes around the key
       KEY: '${BESZEL_KEY}'
+    healthcheck:
+      test: ["CMD-SHELL", "test -S /beszel_socket/beszel.sock || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
