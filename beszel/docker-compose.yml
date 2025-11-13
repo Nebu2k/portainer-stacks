@@ -8,9 +8,12 @@ services:
       - homepage.name=Beszel (Pi5)
       - homepage.description=System Monitor
       - homepage.icon=beszel.png
-      - homepage.href=http://192.168.2.9
+      - homepage.href=http://192.168.2.9:8090
       - homepage.weight=20
-      - homepage.widget.type=docker
+      - homepage.widget.type=beszel
+      - homepage.widget.url=http://192.168.2.9:8090
+      - homepage.widget.username=${BESZEL_USERNAME}
+      - homepage.widget.password=${BESZEL_PASSWORD}
     ports:
       - 8090:8090
     volumes:
