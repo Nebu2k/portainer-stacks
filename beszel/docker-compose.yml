@@ -14,6 +14,7 @@ services:
       - homepage.widget.url=http://192.168.2.9:8090
       - homepage.widget.username=${BESZEL_USERNAME}
       - homepage.widget.password=${BESZEL_PASSWORD}
+      - homepage.widget.version=2
     ports:
       - 8090:8090
     volumes:
