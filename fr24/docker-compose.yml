@@ -14,7 +14,7 @@ services:
     labels:
       - homepage.group=Docker
       - homepage.name=FlightRadar24
-      - homepage.icon=https://cdn.simpleicons.org/flightradar24/FF0000
+      - homepage.icon=mdi-airplane
       - homepage.href=http://192.168.2.9:8754
       - homepage.description=Flight Tracking Feeder
       - homepage.weight=100
