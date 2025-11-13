@@ -9,8 +9,6 @@ services:
       - homepage.icon=pi-hole.png
       - homepage.href=http://192.168.2.9:80/admin
       - homepage.weight=30
-      - homepage.server=raspi5
-      - homepage.container=pihole
       - homepage.widget.type=pihole
       - homepage.widget.url=http://192.168.2.9:80
       - homepage.widget.key=${PIHOLE_API_KEY}

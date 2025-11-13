@@ -18,6 +18,4 @@ services:
       - homepage.href=http://192.168.2.9:8754
       - homepage.description=Flight Tracking Feeder
       - homepage.weight=100
-      - homepage.server=raspi5
-      - homepage.container=fr24feed
       - homepage.widget.type=docker
