@@ -12,6 +12,8 @@ services:
       - homepage.weight=10
       - homepage.widget.type=adguardhome
       - homepage.widget.url=http://192.168.2.2:8080
+      - homepage.widget.username=${ADGUARD_USERNAME}
+      - homepage.widget.password=${ADGUARD_PASSWORD}
     ports:
       # DNS Ports (REQUIRED - für alle Clients im LAN)
       - "53:53/tcp"

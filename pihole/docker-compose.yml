@@ -11,6 +11,7 @@ services:
       - homepage.weight=30
       - homepage.widget.type=pihole
       - homepage.widget.url=http://192.168.2.9:80
+      - homepage.widget.key=${PIHOLE_API_KEY}
     ports:
       - "53:53/tcp"
       - "53:53/udp"
