@@ -4,7 +4,7 @@ services:
     container_name: beszel
     restart: unless-stopped
     labels:
-      - homepage.group=Docker
+      - homepage.group=Monitoring
       - homepage.name=Beszel (Pi5)
       - homepage.description=System Monitor
       - homepage.icon=beszel.png
