@@ -1,5 +1,6 @@
 # Secrets directory (copy manually to host /data/secrets/)
 secrets/
+*/*.env
 
 # Ignore Docker-related files
 **/node_modules/
