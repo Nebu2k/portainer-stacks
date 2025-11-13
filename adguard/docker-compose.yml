@@ -11,8 +11,8 @@ services:
       - homepage.href=http://192.168.2.2:8080
       - homepage.weight=10
       - homepage.server=raspi4
-      - homepage.container=adguard
-      - homepage.widget.type=adguardhome
+      - homepage.container=adguardhome
+      - homepage.widget.type=adguard
       - homepage.widget.url=http://192.168.2.2:8080
       - homepage.widget.username=${ADGUARD_USERNAME}
       - homepage.widget.password=${ADGUARD_PASSWORD}
