@@ -11,6 +11,8 @@ services:
       - homepage.icon=minio.png
       - homepage.href=http://192.168.2.9:9000
       - homepage.weight=60
+      - homepage.server=raspi5
+      - homepage.container=minio
       - homepage.widget.type=docker
     ports:
       - "9300:9000"

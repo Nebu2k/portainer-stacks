@@ -11,6 +11,8 @@ services:
       - homepage.icon=homebridge.png
       - homepage.href=http://192.168.2.9:8581
       - homepage.weight=50
+      - homepage.server=raspi5
+      - homepage.container=homebridge
       - homepage.widget.type=homebridge
       - homepage.widget.url=http://192.168.2.9:8581
       - homepage.widget.username=${HOMEBRIDGE_USERNAME}

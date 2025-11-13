@@ -10,6 +10,8 @@ services:
       - homepage.icon=beszel.png
       - homepage.href=http://192.168.2.9
       - homepage.weight=20
+      - homepage.server=raspi5
+      - homepage.container=beszel
       - homepage.widget.type=docker
     ports:
       - 8090:8090
