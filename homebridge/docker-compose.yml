@@ -6,7 +6,7 @@ services:
     network_mode: host
     labels:
       - homepage.group=Applications
-      - homepage.name=Homebridge (Pi5)
+      - homepage.name=Homebridge
       - homepage.description=HomeKit Bridge
       - homepage.icon=homebridge.png
       - homepage.href=http://homebridge.elmstreet79.de
