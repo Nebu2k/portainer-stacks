@@ -3,18 +3,6 @@ services:
     image: henrygd/beszel:latest
     container_name: beszel
     restart: unless-stopped
-    labels:
-      - homepage.group=Monitoring
-      - homepage.name=Beszel (Pi5)
-      - homepage.description=System Monitor
-      - homepage.icon=beszel.png
-      - homepage.href=http://192.168.2.9:8090
-      - homepage.weight=20
-      - homepage.widget.type=beszel
-      - homepage.widget.url=http://192.168.2.9:8090
-      - homepage.widget.username=${BESZEL_USERNAME}
-      - homepage.widget.password=${BESZEL_PASSWORD}
-      - homepage.widget.version=2
     ports:
       - 8090:8090
     volumes:
