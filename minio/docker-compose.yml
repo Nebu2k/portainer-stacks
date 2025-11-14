@@ -5,12 +5,12 @@ services:
     container_name: minio
     restart: unless-stopped
     labels:
-      - homepage.group=Docker
+      - homepage.group=Infrastructure
       - homepage.name=MinIO (Pi5)
       - homepage.description=S3 Storage
       - homepage.icon=minio.png
       - homepage.href=http://192.168.2.9:9000
-      - homepage.weight=60
+      - homepage.weight=50
     ports:
       - "9300:9000"
       - "9393:9001"

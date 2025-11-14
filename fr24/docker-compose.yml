@@ -12,9 +12,9 @@ services:
       - FR24KEY=${FR24_KEY}
     dns_search: .
     labels:
-      - homepage.group=Docker
+      - homepage.group=Applications
       - homepage.name=FlightRadar24
       - homepage.icon=mdi-airplane
       - homepage.href=http://192.168.2.9:8754
       - homepage.description=Flight Tracking Feeder
-      - homepage.weight=100
+      - homepage.weight=40
