@@ -32,8 +32,8 @@ services:
       homepage.weight: 30
       homepage.widget.type: adguard
       homepage.widget.url: http://adguard.elmstreet79.de
-      homepage.widget.username: "{{HOMEPAGE_VAR_ADGUARD_USER}}"
-      homepage.widget.password: "{{HOMEPAGE_VAR_ADGUARD_PASS}}"
+      homepage.widget.username: ${ADGUARD_USERNAME}
+      homepage.widget.password: ${ADGUARD_PASSWORD}
     
     healthcheck:
       test: ["CMD-SHELL", "wget -q --spider http://localhost:80/login.html || exit 1"]

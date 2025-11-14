@@ -17,8 +17,8 @@ services:
       homepage.weight: 20
       homepage.widget.type: beszel
       homepage.widget.url: http://beszel.elmstreet79.de
-      homepage.widget.username: "{{HOMEPAGE_VAR_BESZEL_USER}}"
-      homepage.widget.password: "{{HOMEPAGE_VAR_BESZEL_PASS}}"
+      homepage.widget.username: ${BESZEL_USERNAME}
+      homepage.widget.password: ${BESZEL_PASSWORD}
       homepage.widget.version: 2
 
   beszel-agent:
