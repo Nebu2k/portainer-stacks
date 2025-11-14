@@ -9,10 +9,10 @@ services:
       - homepage.name=Homebridge (Pi5)
       - homepage.description=HomeKit Bridge
       - homepage.icon=homebridge.png
-      - homepage.href=http://192.168.2.9:8581
+      - homepage.href=http://homebridge.elmstreet79.de
       - homepage.weight=30
       - homepage.widget.type=homebridge
-      - homepage.widget.url=http://192.168.2.9:8581
+      - homepage.widget.url=http://homebridge.elmstreet79.de
       - homepage.widget.username=${HOMEBRIDGE_USERNAME}
       - homepage.widget.password=${HOMEBRIDGE_PASSWORD}
     volumes:
