@@ -24,7 +24,7 @@ services:
       - /data/adguard/confdir:/opt/adguardhome/conf
     
     labels:
-      homepage.group: Infrastructure
+      homepage.group: DNS
       homepage.name: AdGuard Home (Pi4)
       homepage.icon: adguard-home.png
       homepage.href: http://adguard.elmstreet79.de
