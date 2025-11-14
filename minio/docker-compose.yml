@@ -10,7 +10,7 @@ services:
       - homepage.description=S3 Storage
       - homepage.icon=minio.png
       - homepage.href=http://minio.elmstreet79.de
-      - homepage.weight=50
+      - homepage.weight=60
     ports:
       - "9300:9000"
       - "9393:9001"
