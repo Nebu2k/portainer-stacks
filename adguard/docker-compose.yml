@@ -9,7 +9,7 @@ services:
       - homepage.description=DNS Ad Blocker
       - homepage.icon=adguard-home.png
       - homepage.href=http://192.168.2.2:8080
-      - homepage.weight=40
+      - homepage.weight=30
       - homepage.widget.type=adguard
       - homepage.widget.url=http://192.168.2.2:8080
       - homepage.widget.username=${ADGUARD_USERNAME}
