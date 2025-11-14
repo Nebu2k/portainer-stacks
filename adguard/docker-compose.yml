@@ -23,6 +23,18 @@ services:
       - /data/adguard/workdir:/opt/adguardhome/work
       - /data/adguard/confdir:/opt/adguardhome/conf
     
+    labels:
+      homepage.group: Infrastructure
+      homepage.name: AdGuard Home (Pi4)
+      homepage.icon: adguard-home.png
+      homepage.href: http://adguard.elmstreet79.de
+      homepage.description: DNS Ad Blocker
+      homepage.weight: 30
+      homepage.widget.type: adguard
+      homepage.widget.url: http://adguard.elmstreet79.de
+      homepage.widget.username: "{{HOMEPAGE_VAR_ADGUARD_USER}}"
+      homepage.widget.password: "{{HOMEPAGE_VAR_ADGUARD_PASS}}"
+    
     healthcheck:
       test: ["CMD-SHELL", "wget -q --spider http://localhost:80/login.html || exit 1"]
       interval: 30s
