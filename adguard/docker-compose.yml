@@ -3,17 +3,6 @@ services:
     image: adguard/adguardhome:latest
     container_name: adguardhome
     restart: unless-stopped
-    labels:
-      - homepage.group=Infrastructure
-      - homepage.name=AdGuard Home (Pi4)
-      - homepage.description=DNS Ad Blocker
-      - homepage.icon=adguard-home.png
-      - homepage.href=http://192.168.2.2:8080
-      - homepage.weight=30
-      - homepage.widget.type=adguard
-      - homepage.widget.url=http://192.168.2.2:8080
-      - homepage.widget.username=${ADGUARD_USERNAME}
-      - homepage.widget.password=${ADGUARD_PASSWORD}
     ports:
       # DNS Ports (REQUIRED - für alle Clients im LAN)
       - "53:53/tcp"
