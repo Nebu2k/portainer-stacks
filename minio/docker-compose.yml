@@ -9,7 +9,7 @@ services:
       - homepage.name=MinIO (Pi5)
       - homepage.description=S3 Storage
       - homepage.icon=minio.png
-      - homepage.href=http://192.168.2.9:9000
+      - homepage.href=http://minio.elmstreet79.de
       - homepage.weight=50
     ports:
       - "9300:9000"
