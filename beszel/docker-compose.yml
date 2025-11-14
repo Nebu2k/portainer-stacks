@@ -8,6 +8,18 @@ services:
     volumes:
       - /data/beszel/beszel_data:/beszel_data
       - /data/beszel/beszel_socket:/beszel_socket
+    labels:
+      homepage.group: Monitoring
+      homepage.name: Beszel (Pi5)
+      homepage.icon: beszel.png
+      homepage.href: http://beszel.elmstreet79.de
+      homepage.description: System Monitor
+      homepage.weight: 20
+      homepage.widget.type: beszel
+      homepage.widget.url: http://beszel.elmstreet79.de
+      homepage.widget.username: "{{HOMEPAGE_VAR_BESZEL_USER}}"
+      homepage.widget.password: "{{HOMEPAGE_VAR_BESZEL_PASS}}"
+      homepage.widget.version: 2
 
   beszel-agent:
     image: henrygd/beszel-agent:latest
