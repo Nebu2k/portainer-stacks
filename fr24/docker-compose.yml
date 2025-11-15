@@ -15,6 +15,6 @@ services:
       - homepage.group=Applications
       - homepage.name=FlightRadar24
       - homepage.icon=mdi-airplane
-      - homepage.href=http://fr24.elmstreet79.de
+      - homepage.href=https://fr24.elmstreet79.de
       - homepage.description=Flight Tracking Feeder
       - homepage.weight=40

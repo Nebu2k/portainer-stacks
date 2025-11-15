@@ -27,11 +27,11 @@ services:
       homepage.group: DNS
       homepage.name: AdGuard Home (Pi4)
       homepage.icon: adguard-home.png
-      homepage.href: http://adguard.elmstreet79.de
+      homepage.href: https://adguard.elmstreet79.de
       homepage.description: DNS Ad Blocker
       homepage.weight: 30
       homepage.widget.type: adguard
-      homepage.widget.url: http://adguard.elmstreet79.de
+      homepage.widget.url: https://adguard.elmstreet79.de
       homepage.widget.username: ${ADGUARD_USERNAME}
       homepage.widget.password: ${ADGUARD_PASSWORD}
     
