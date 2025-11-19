@@ -5,12 +5,12 @@ services:
     restart: always
     network_mode: host
     labels:
-      - homepage.group=Applications
+      - homepage.group=Smart Home
       - homepage.name=Homebridge
       - homepage.description=HomeKit Bridge
       - homepage.icon=homebridge.png
       - homepage.href=https://homebridge.elmstreet79.de
-      - homepage.weight=30
+      - homepage.weight=20
       - homepage.widget.type=homebridge
       - homepage.widget.url=https://homebridge.elmstreet79.de
       - homepage.widget.username=${HOMEBRIDGE_USERNAME}

@@ -7,7 +7,7 @@ services:
     labels:
       - homepage.group=Infrastructure
       - homepage.name=MinIO
-      - homepage.description=S3 Storage
+      - homepage.description=S3 Object Storage
       - homepage.icon=minio.png
       - homepage.href=https://minio.elmstreet79.de
       - homepage.weight=60

@@ -29,7 +29,7 @@ services:
       homepage.icon: adguard-home.png
       homepage.href: https://adguard.elmstreet79.de
       homepage.description: DNS Ad Blocker
-      homepage.weight: 30
+      homepage.weight: 20
       homepage.widget.type: adguard
       homepage.widget.url: https://adguard.elmstreet79.de
       homepage.widget.username: ${ADGUARD_USERNAME}

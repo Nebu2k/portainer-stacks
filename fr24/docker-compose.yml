@@ -12,9 +12,9 @@ services:
       - FR24KEY=${FR24_KEY}
     dns_search: .
     labels:
-      - homepage.group=Applications
+      - homepage.group=Applications - Intern
       - homepage.name=FlightRadar24
       - homepage.icon=mdi-airplane
       - homepage.href=https://fr24.elmstreet79.de
       - homepage.description=Flight Tracking Feeder
-      - homepage.weight=40
+      - homepage.weight=20
