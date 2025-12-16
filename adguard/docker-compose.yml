@@ -25,7 +25,7 @@ services:
     
     labels:
       homepage.group: DNS
-      homepage.name: AdGuard Home (Pi4)
+      homepage.name: AdGuard Home (Pi5)
       homepage.icon: adguard-home.png
       homepage.href: https://adguard.elmstreet79.de
       homepage.description: DNS Ad Blocker
