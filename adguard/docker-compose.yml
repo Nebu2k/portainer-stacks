@@ -24,7 +24,7 @@ services:
       - /data/adguard/confdir:/opt/adguardhome/conf
     
     labels:
-      homepage.group: DNS
+      homepage.group: Infrastructure
       homepage.name: AdGuard Home (Pi5)
       homepage.icon: adguard-home.png
       homepage.href: https://adguard.elmstreet79.de
@@ -49,7 +49,7 @@ services:
     command: run --config /config/adguardhome-sync.yaml
     
     labels:
-      homepage.group: DNS
+      homepage.group: Infrastructure
       homepage.name: AdGuard Sync
       homepage.icon: adguard-home-sync.png
       homepage.href: https://adguard-sync.elmstreet79.de
