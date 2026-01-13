@@ -41,28 +41,3 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
-
-  adguardhome-sync:
-    image: ghcr.io/bakito/adguardhome-sync:latest
-    container_name: adguardhome-sync
-    restart: unless-stopped
-    command: run --config /config/adguardhome-sync.yaml
-    
-    labels:
-      homepage.group: Infrastructure
-      homepage.name: AdGuard Sync
-      homepage.icon: adguard-home-sync.png
-      homepage.href: https://adguard-sync.elmstreet79.de
-      homepage.description: AdGuard Configuration Sync
-      homepage.weight: 42
-    
-    ports:
-      # Sync API/Web UI
-      - "8081:8080/tcp"
-    
-    volumes:
-      - /data/adguard-sync/adguardhome-sync.yaml:/config/adguardhome-sync.yaml:ro
-    
-    depends_on:
-      adguardhome:
-        condition: service_healthy
